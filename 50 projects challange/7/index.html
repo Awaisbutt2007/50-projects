@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+
+        <div class="navbar">
+            <div class="logo"><a href="#">Web Dev Creation</a></div>
+            <ul class="links">
+                <li><a href="hero">Hero</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="service">Service</a></li>
+                <li><a href="contant">Contant</a></li>
+            </ul>
+            <a href="#" class="action-btn">Get Started</a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-manu ">
+            <li><a href="hero">Hero</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="service">Service</a></li>
+            <li><a href="contant">Contant</a></li>
+            <a href="#" class="action-btn">Get Started</a>
+
+        </div>
+    </header>
+
+
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn")
+        const toggelBtnIcon = document.querySelector(".toggle-btn i")
+        const dropDownManu = document.querySelector(".dropdown-manu")
+
+
+        toggleBtn.addEventListener("click", () => {
+            dropDownManu.classList.toggle("open")
+            const isOpen = dropDownManu.classList.contains('open')
+
+            toggelBtnIcon.classList = isOpen
+           ? 'fa-solid fa-xmark'
+           : 'fa-solid fa-bars'
+
+        })
+    </script>
+</body>
+
+</html>

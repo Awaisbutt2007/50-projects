@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: century;
+}
+
+header {
+    background: url(maldives-island-beach-tropical-landscape-600nw-2547983501.webp);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 30x;
+    min-height: 400px;
+    margin-right: 60px;
+    font-size: 16px;
+}
+
+ul li {
+    margin-top: 13px;
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+}
+
+ul li a:hover {
+    color: #000;
+    background: #fff;
+}
+
+ul li .active a {
+    color: #000;
+    background: #fff;
+}
+
+.logo h1 {
+    float: left;
+    width: 150px;
+    height: 200px;
+    color: orange;
+    padding: 10px 20px;
+
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 70px;
+}
+
+.button {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    color: #fff;
+    transition: 0.5s ease;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.sub-manu {
+    display: none;
+    top: 6%;
+    position: relative;
+}
+
+.sub-manu ul {
+    position: absolute;
+
+}
+
+.main ul li:hover .sub-manu {
+    display: block;
+    position: absolute;
+    background: blue;
+    margin-top: -15px;
+    margin-left: -8px;
+}
+
+.main ul li:hover .sub-manu ul {
+    display: block;
+    margin: 6px;
+
+}
+
+.main ul li:hover .sub-manu ul li {
+    width: 75px;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    transition: 0.4s ease;
+
+}
