@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="sighup-root">
+        <section class="form-wrap">
+            <div class="brand">
+                <h1>Sign Up To Make Tech</h1>
+                <p class="tag">For Exclusive Content - join Mokos Tech</p>
+            </div>
+            <form id="signup-form" class="signup-form" novalidate>
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter Your Full Name" required
+                        autocomplete="name">
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Your.email@example.com" required
+                        autocomplete="email">
+                </div>
+
+                <div class="field">
+                    <label for="password">password</label>
+                    <div class="input-with-icon">
+                        <input id="password" name="password" type="password" placeholder="Enter a password"
+                            minlength="6" required autocomplete="new-password">
+                        <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Show password">o</button>
+                    </div>
+                    <div class="strenght" aria-hidden="true">
+                        <div class="strenght-bar" id="strenght-bar"></div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="confirm">Confirm Password</label>
+                    <input id="confirm" name="confirm" type="password" placeholder="Confirm Your Password" required
+                        autocomplete="new-password" minlength="6">
+                </div>
+                <div class="action">
+                    <button type="submit" class="btn-primary" id="btn-primary">
+                        <span class="btn-text">Create Account</span>
+                        <span class="spinner" id="submit-spinner" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <p class="small">Already have an account? <a href="#">Sign in</a></p>
+            </form>
+            <div class="socials">
+                <button type="button" class="social-btn google" id="google-sign">Sign up with google</button>
+                <button type="button" class="social-btn github" id="github-sign">Sign up with GitHub</button>
+            </div>
+            <div id="status" aria-live="polite" class="status" hidden></div>
+        </section>
+    </main>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(44% );
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotatey(0deg);
+    }
+
+    to {
+        transform: perspective(1000px)rotateX(-16deg)  rotatey(360deg);
+
+    }
+
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) *(360 / var(--quantity)* 1deg))) translateZ(550px);
+}
+
+.banner .slider .item img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: max-content;
+    width: min(1400px, 100vw);
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283b;
+    position: relative;
+}
+.banner .content h1::after {
+position: absolute;
+inset: 0 0 0 0;
+content: attr(data-content);
+z-index: 2;
+-webkit-text-stroke: 2px #d2d2d2;
+color: transparent;
+}
+
+
+.banner .content .author{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(ASSERTS/pngegg.png);
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size:auto 130%;
+    background-position: top center;
+    z-index: 1;
+}
